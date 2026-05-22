@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>Euro Vetix</title>
+    <meta content="Euro Vetix" name="description">
+    <meta content="Euro Vetix" name="keywords">
+    <meta content="INDEX,FOLLOW" name="robots">
+
+    <!-- Mobile Specific Metas -->
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Theme Custom CSS -->
+    <!-- Euro Vetix Custom Overrides -->
+    <style>
+      /* ── Global Brand Colors (Enforcing Euro Vetix Red #E2001A) ─────── */
+      :root {
+        --theme-color: #E2001A !important;
+        --theme-color2: #E2001A !important;
+      }
+      .text-theme { color: #E2001A !important; }
+      .bg-theme, .bg-theme2, .bg-theme3 { background-color: #E2001A !important; }
+      .theme-btn { color: #ffffff; }
+      .theme-btn:hover { color: #ffffff; opacity: 0.9; }
+
+      /* ── Footer Overrides (Force White Text) ─────────────────────────── */
+      .footer-section, .footer-section .text, .footer-section h4.title, .footer-section a, .footer-section p {
+        color: #ffffff !important;
+      }
+      .footer-section a:hover {
+        color: rgba(255,255,255,0.8) !important;
+      }
+
+      /* ── Global Form Inputs (Force White Background) ────────────────── */
+      input, textarea, select {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        border: 1px solid rgba(0,0,0,0.1) !important;
+      }
+      input::placeholder, textarea::placeholder {
+        color: #888888 !important;
+      }
+
+      /* ── Global Layout Safeguards ────────────────────────────────────── */
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ── Header: solid white, flush to top ───────────────────────── */
+      .nav-header.header-style7 {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+      }
+      .nav-header.header-style7 .sticky-wrapper {
+        position: static !important;
+      }
+      .nav-header.header-style7 .main-wrapper {
+        background-color: #ffffff !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        margin: 0 !important;
+        padding: 0 40px !important;
+      }
+      @media (max-width: 991px) {
+        .nav-header.header-style7 .main-wrapper {
+          padding: 0 16px !important;
+        }
+      }
+      /* Nav links always red */
+      .nav-header.header-style7 .main-menu > ul > li > a {
+        color: #E2001A !important;
+      }
+      .nav-header.header-style7 .main-menu > ul > li > a:hover {
+        color: #c40018 !important;
+      }
+      /* Active nav item */
+      .nav-header.header-style7 .main-menu > ul > li.active > a,
+      .nav-header.header-style7 .main-menu > ul > li.current > a {
+        color: #c40018 !important;
+        font-weight: 700 !important;
+      }
+      /* Header logo area */
+      .nav-header.header-style7 .menu-area {
+        background-color: transparent !important;
+      }
+      /* Mobile hamburger lines – red */
+      .nav-header.header-style7 .menu-toggle .line,
+      .nav-header.header-style7 .sidebar-btn .line {
+        background-color: #E2001A !important;
+        display: block;
+        width: 24px;
+        height: 2px;
+        margin: 5px 0;
+        border-radius: 2px;
+      }
+      /* Sidebar dot icon - make it dark/red */
+      .nav-header.header-style7 .sidebar-icon {
+        display: flex;
+        align-items: center;
+      }
+      .nav-header.header-style7 .sidebar-tab img {
+        filter: invert(15%) sepia(87%) saturate(5212%) hue-rotate(345deg) brightness(97%) contrast(107%);
+        width: 28px;
+        height: auto;
+      }
+      /* Header CTA button — solid red on white bg */
+      .nav-header.header-style7 .theme-btn.bg-theme {
+        background-color: #E2001A !important;
+        color: #ffffff !important;
+        border: none !important;
+      }
+      .nav-header.header-style7 .theme-btn.bg-theme:hover {
+        background-color: #c40018 !important;
+        color: #ffffff !important;
+      }
+
+      /* ── Offset page for fixed header ────────────────────────────────── */
+      .hero-section.style-6 {
+        padding-top: 90px !important;
+      }
+
+      /* ── About section customar-box: fix word overflow ───────────────── */
+      .about-section.style-6 .customar-box {
+        min-width: 200px;
+        max-width: 240px;
+      }
+      .about-section.style-6 .customar-box .box-bottom h6 {
+        white-space: nowrap;
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+      }
+
+      /* ── Marquee CSS keyframe animation ──────────────────────────────── */
+      @keyframes marqueeScroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .marquee-track {
+        display: flex;
+        white-space: nowrap;
+        animation: marqueeScroll 28s linear infinite;
+        will-change: transform;
+      }
+      .marquee-track:hover {
+        animation-play-state: paused;
+      }
+
+      /* ── Sticky header override ───────────────────────────────────────── */
+      .sticky-header.fixed-header {
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+      }
+      .sticky-header .navigation > li > a {
+        color: #E2001A !important;
+      }
+      .sticky-header .navigation > li.active > a,
+      .sticky-header .navigation > li.current > a {
+        font-weight: 700 !important;
+        color: #c40018 !important;
+      }
+    </style>
+  <script type="module" crossorigin src="/eurovetix-website/assets/index-D5OmhbNj.js"></script>
+  <link rel="stylesheet" crossorigin href="/eurovetix-website/assets/index-CdLeYBRs.css">
+</head>
+
+<body id="body" class="bg-theme3">
+    <div id="root"></div>
+    
+    <!-- Jquery and Bootstrap needed by template -->
+    <script src="./assets/js/vendor/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    
+    <!-- React Entry Point -->
+</body>
+
+</html>
