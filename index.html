@@ -29,14 +29,16 @@
         --theme-color2: #E2001A !important;
       }
       .text-theme { color: #E2001A !important; }
-      .bg-theme, .bg-theme2, .bg-theme3 { background-color: #E2001A !important; }
+      .bg-theme, .bg-theme2 { background-color: #E2001A !important; }
+      .bg-theme3 { background-color: #ffffff !important; } /* Stop template theme3 sections from being red */
+      body { background-color: #ffffff !important; } /* Global White Background Safeguard */
       body .theme-btn { color: #ffffff; }
       body .theme-btn:hover { color: #ffffff; opacity: 0.9; }
 
       /* ── Premium Dark Grey Footer styling ─────────────────────────── */
-      .footer-section {
+      .footer-section, .footer-section.bg-dark {
         background-color: #1c1c1e !important; /* Premium dark grey */
-        border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+        border: none !important; /* Seamless merge with newsletter section */
       }
       .footer-section h4.title {
         color: #ffffff !important;
@@ -81,13 +83,13 @@
         color: #8e8e98 !important;
         font-size: 13px !important;
       }
-      .newsletter-form button {
-        color: #E2001A !important;
+      .newsletter-form button, .newsletter-form button i {
+        color: #ffffff !important;
         font-size: 16px !important;
-        transition: color 0.2s ease !important;
+        transition: opacity 0.2s ease !important;
       }
-      .newsletter-form button:hover {
-        color: #c40018 !important;
+      .newsletter-form button:hover, .newsletter-form button i:hover {
+        opacity: 0.8 !important;
       }
       .footer-bottom {
         background-color: #121214 !important; /* Slightly darker charcoal for copyright strip */
@@ -242,10 +244,11 @@
 
       /* ── Newsletter Section (Floating design over dark footer background) ── */
       .newsletter-section {
-        background-color: #1c1c1e !important; /* Premium dark grey matching footer */
+        background: linear-gradient(to bottom, #ffffff 50%, #1c1c1e 50%) !important; /* Top 50% white, bottom 50% matching dark footer */
         padding: 80px 0 0px 0 !important; /* Seamless connection at bottom with footer */
         position: relative;
         z-index: 10;
+        border: none !important;
       }
       .newsletter-section .newsletter {
         box-shadow: 0 20px 50px rgba(0,0,0,0.55) !important; /* High-end floating depth shadow */
@@ -253,7 +256,7 @@
         border: 1px solid rgba(255, 255, 255, 0.05) !important;
       }
     </style>
-  <script type="module" crossorigin src="/eurovetix-website/assets/index-DUpbX1XE.js"></script>
+  <script type="module" crossorigin src="/eurovetix-website/assets/index-C6BIUlXL.js"></script>
   <link rel="stylesheet" crossorigin href="/eurovetix-website/assets/index-CdLeYBRs.css">
 </head>
 
